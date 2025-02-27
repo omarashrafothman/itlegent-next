@@ -47,7 +47,7 @@ function Page() {
 
     return (
         <div>
-            <div className='courseDetailsHead bg-slate-50 flex flex-col px-[38px] py-1 '>
+            <div className='courseDetailsHead bg-slate-50 flex flex-col px-[15px]  sm:px-[38px] py-1 '>
                 <div className='helmet'>
                     <div className="flex items-center text-sm">
 
@@ -55,8 +55,8 @@ function Page() {
                     </div>
 
                 </div>
-                <div className='mt-[10px]'>
-                    <h2 className='font-semibold text-3xl'>{courseItem?.title}</h2>
+                <div className='mt-[10px] mb-2'>
+                    <h2 className='font-semibold text-2xl sm:text-3xl'>{courseItem?.title}</h2>
                 </div>
 
             </div>
@@ -65,13 +65,13 @@ function Page() {
 
 
                     <div className='w-full md:w-[58%] flex flex-col py-3'>
-                        <div className='videoFrame w-full h-[527px]  rounded-md'>
+                        <div className='videoFrame w-full h-[227px] sm:h-[527px]  rounded-md'>
                             {currentVideo?.id && (
                                 <VideoPlayer video={{ id: currentVideo?.id, url: currentVideo?.url || "", title: currentVideo?.title || "" }} handler={endedHandler} />
                             )}
                         </div>
 
-                        <div className='socialLinks flex gap-5 mt-[40px]'>
+                        <div className='socialLinks flex gap-5 mt-[40px] justify-between'>
 
                             <Link href="" className='rounded-full w-[45px] h-[45px] border border-gray-300 flex items-center justify-center '>
                                 <Facebook className='text-gray-500 w-6 h-6' />

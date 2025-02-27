@@ -4,7 +4,7 @@ function CommentItem({ avatar, comment, date, name }: CommentItemProps) {
     return (
         <div className='flex gap-5 py-4 border-b border-gray-300'>
             <div className='commentImage mt-1'>
-                <div className='w-16 h-16'>
+                <div className='w-10 h-10 sm:w-16 sm:h-16 '>
                     <Image className='w-full h-full rounded-full  object-cover' src={avatar} alt='user' width={100} height={100} />
                 </div>
             </div>
